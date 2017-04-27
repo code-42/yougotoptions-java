@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+<!--
+    /**
+     * Inspired by LaunchCode
+     * Created by Edward Dupre
+     * Copyright 2017
+     */
+-->
+</head>
+
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless="${options} and ${options.size()}">no options :(</p>
+
+
+<table class="table">
+
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Edit</th>
+    </tr>
+
+    <tr th:each="option : ${options}">
+        <td th:text="${option.name}"></td>
+        <td th:text="${option.description}"></td>
+        <td><a th:href="'/options/edit/' + ${option.id}">edit</a></td>
+    </tr>
+
+</table>
+
+    <a href="/options/add">Add</a> |
+    <a href="/options/remove">Remove</a>
+</div>
+<div th:replace="fragments :: page-footer"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+<!--
+    /**
+     * Inspired by LaunchCode
+     * Created by Edward Dupre
+     * Copyright 2017
+     */
+-->
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<form method="post" th:object="${form}">
+
+    <div th:each="option : ${options}" class="checkbox" th:for="optionsIds" >
+        <input type="checkbox" name="optionsIds" th:value="${option.id}" th:id="${option.id}"/>
+        <label th:for="${option.id}" th:text="${option.name}"></label>
+        <br />
+    </div>
+
+    <input type="submit" value="Remove Option" />
+
+</form>
+</div>
+<div th:replace="fragments :: page-footer"></div>
+</body>
+</html>

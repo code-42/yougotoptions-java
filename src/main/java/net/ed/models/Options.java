@@ -18,7 +18,7 @@ public class Options {
     private int id;
 
     @NotNull
-    @Size(min=3, max=255)
+    @Size(min=3, max=25)
     private String name;
 
     @NotNull

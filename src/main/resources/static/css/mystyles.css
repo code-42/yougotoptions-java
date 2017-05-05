@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.left-half {
+    float: left;
+    width: 50%;
+}
+
+.right-half {
+    float: right;
+    width: 50%;
+}
+
+.chart-data{
+    padding-top: 50px;
+}

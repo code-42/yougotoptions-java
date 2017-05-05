@@ -2546,9 +2546,12 @@ output {
   line-height: 1.42857143;
   color: #555;
 }
+/*
+* change form-control width from 100% t0 50% 2017-05-03 ED
+*/
 .form-control {
   display: block;
-  width: 100%;
+  width: 50%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;

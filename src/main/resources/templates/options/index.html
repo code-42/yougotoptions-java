@@ -32,8 +32,8 @@
     </tr>
 
     <tr th:each="option : ${options}">
-        <td th:text="${option.name}"></td>
-        <td th:text="${option.description}"></td>
+        <td th:text="${option.stock_symbol}"></td>
+        <td th:text="${option.iv}"></td>
         <td><a th:href="'/options/edit/' + ${option.id}">edit</a></td>
     </tr>
 

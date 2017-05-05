@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:fragment="head">
-<!--
-    /**
-     * Inspired by LaunchCode
-     * Created by Edward Dupre
-     * Copyright 2017
-     */
--->
+    <!--
+        /**
+         * Inspired by LaunchCode
+         * Created by Edward Dupre
+         * Copyright 2017
+         */
+    -->
 
-    <title th:text="${title}">My MVC Cheeses</title>
+    <title th:text="${title}">You Got Options</title>
 
     <!-- Bootstrap stylesheets and script -->
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
     <link th:href="@{/css/techjobs.css}" rel="stylesheet" />
-    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+    <link th:href="@{/css/mystyles.css}" rel="stylesheet" />
+    <!-- script type="text/javascript" th:src="@{/js/bootstrap.js}"></script -->
 
 </head>
 <body>
 
-    <div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a th:href="@{/options}" class="navbar-brand">You Got Options<sup class="tm">&trade;</sup> <span style="font-size:small">- version 0.1</span></a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a th:href="@{/options}">Home</a></li>
-                    <li><a th:href="@{/options/add}">Add</a></li>
-                    <li><a th:href="@{/options/remove}">Remove</a></li>
-                    <li><a th:href="@{/options}">&nbsp;&nbsp;&nbsp;&nbsp;SignUp and LogIn coming soon!</a></li>
-                </ul>
-            </div>
+<div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a th:href="@{/options}" class="navbar-brand">You Got Options<sup class="tm">&trade;</sup> <span style="font-size:small">- version 0.1</span></a>
         </div>
-    </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/options}">Home</a></li>
+                <!--
+                                    <li><a th:href="@{/options/add}">Add</a></li>
+                                    <li><a th:href="@{/options/remove}">Remove</a></li>
 
-    <div th:fragment="page-footer" class="navbar navbar-inverse navbar-fixed-bottom">
-        <div class="container">
-            <div class="navbar-footer">
-                <div class="navbar-brand">Copyright &#169;<span><a href="mailto:edwd42@gmail.com">&nbsp;email me</a></span></div>
-            </div>
+                <li><a th:href="@{/options/charts}">Charts</a></li>
+                -->
+                <li><a th:href="@{/options/dump_table_to_json.php}">PHP script</a></li>
+                <li><a th:href="@{/options}">&nbsp;&nbsp;&nbsp;&nbsp;SignUp and LogIn coming soon!</a></li>
+            </ul>
         </div>
     </div>
+</div>
+
+<div th:fragment="page-footer" class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-footer">
+            <div class="navbar-brand">Copyright &#169;<span><a href="mailto:edwd42@gmail.com">&nbsp;email me</a></span></div>
+        </div>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+
+</div>
 
 </body>
 </html>

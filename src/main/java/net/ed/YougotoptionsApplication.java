@@ -3,6 +3,7 @@ package net.ed;
  * Inspired by LaunchCode
  * Created by Edward Dupre
  * Copyright 2017
+ * rewritten in Java 2018
  */
 
 import org.springframework.boot.SpringApplication;
